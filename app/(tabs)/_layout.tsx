@@ -3,11 +3,12 @@ import { colors, components } from "@/constants/theme";
 import clsx from "clsx";
 import { Tabs } from "expo-router";
 import { Image, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import {
+  useSafeAreaInsets
+} from "react-native-safe-area-context";
 
 const tabBar = components.tabBar;
 
-const insets = useSafeAreaInsets();
 const TabIcon = ({ focused, icon }: TabIconProps) => {
   return (
     <View className="tabs-icon">
@@ -18,6 +19,7 @@ const TabIcon = ({ focused, icon }: TabIconProps) => {
   );
 };
 const TabLayout = () => {
+  const insets = useSafeAreaInsets();
   return (
     <Tabs
       screenOptions={{
