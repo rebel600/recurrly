@@ -1,14 +1,14 @@
 <div align="center">
   <div>
-<img src="https://img.shields.io/badge/-React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-<img src="https://img.shields.io/badge/-NativeWind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-<img src="https://img.shields.io/badge/-Expo-000020?style=for-the-badge&logo=expo&logoColor=white" /><br/>
-<img src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" />
-<img src="https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" /><br/>
-<img src="https://img.shields.io/badge/-Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white" />
-<img src="https://img.shields.io/badge/-PostHog-F0AD4E?style=for-the-badge&logo=posthog&logoColor=white" />
-<img src="https://img.shields.io/badge/-CodeRabbit-FF5100?style=for-the-badge&logo=coderabbit&logoColor=white" />
+<img alt="React Native badge" src="https://img.shields.io/badge/-React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+<img alt="NativeWind badge" src="https://img.shields.io/badge/-NativeWind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+<img alt="React Native badge" src="https://img.shields.io/badge/-Expo-000020?style=for-the-badge&logo=expo&logoColor=white" /><br/>
+<img alt="Node badge" src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+<img alt="Express badge" src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" />
+<img alt="MongoDB badge" src="https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" /><br/>
+<img alt="Clerk badge" src="https://img.shields.io/badge/-Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white" />
+<img alt="Post Hog badge" src="https://img.shields.io/badge/-PostHog-F0AD4E?style=for-the-badge&logo=posthog&logoColor=white" />
+<img alt="Code Rabbit badge" src="https://img.shields.io/badge/-CodeRabbit-FF5100?style=for-the-badge&logo=coderabbit&logoColor=white" />
 </div>
 
   <h3 align="center">Recurrly | Subscription Management | React Native App</h3>
@@ -24,8 +24,6 @@
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
 
 ## <a name="introduction">✨ Introduction</a>
 
@@ -48,9 +46,9 @@ Recurrly is a full-stack subscription management application designed to help us
 
 ### Infrastructure & Tools
 
-- **[Clerk](https://jsm.dev/nativesub-clerk)** provides a complete suite of authentication and user management tools. It handles secure sign-ins, session management, and integrates seamlessly with billing workflows.
-- **[PostHog](https://jsm.dev/nativesub-posthog)** is an all-in-one platform for product analytics. It helps track user behavior, feature usage, and conversion rates, giving you the data needed to improve the app based on real-world usage.
-- **[CodeRabbit](https://jsm.dev/nativesub-coderabbit)** is an AI-powered code review assistant. It provides deep, context-aware feedback on pull requests, helping maintain high code quality and catching potential bugs before they reach production.
+- **[Clerk](https://shyam.mern/nativesub-clerk)** provides a complete suite of authentication and user management tools. It handles secure sign-ins, session management, and integrates seamlessly with billing workflows.
+- **[PostHog](https://shyam.mern/nativesub-posthog)** is an all-in-one platform for product analytics. It helps track user behavior, feature usage, and conversion rates, giving you the data needed to improve the app based on real-world usage.
+- **[CodeRabbit](https://shyam.mern/nativesub-coderabbit)** is an AI-powered code review assistant. It provides deep, context-aware feedback on pull requests, helping maintain high code quality and catching potential bugs before they reach production.
 
 ## <a name="features">🔋 Features</a>
 
@@ -152,7 +150,7 @@ POSTHOG_PROJECT_TOKEN=
 POSTHOG_HOST=https://us.i.posthog.com
 ```
 
-Replace the placeholder values with your real credentials. You can get these by signing up at: [**Expo**](https://jsm.dev/nativesub-exp), [**PostHog**](https://jsm.dev/nativesub-posthog) .
+Replace the placeholder values with your real credentials. You can get these by signing up at: [**Expo**](https://expo.dev/accounts/shyam.mern), [**PostHog**](https://shyam.mern/nativesub-posthog) .
 
 **Running the Project**
 
