@@ -2,7 +2,7 @@
   <div>
 <img alt="React Native badge" src="https://img.shields.io/badge/-React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
 <img alt="NativeWind badge" src="https://img.shields.io/badge/-NativeWind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-<img alt="React Native badge" src="https://img.shields.io/badge/-Expo-000020?style=for-the-badge&logo=expo&logoColor=white" /><br/>
+<img alt="Expo badge" src="https://img.shields.io/badge/-Expo-000020?style=for-the-badge&logo=expo&logoColor=white" /><br/>
 <img alt="Node badge" src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
 <img alt="Express badge" src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express&logoColor=white" />
 <img alt="MongoDB badge" src="https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" /><br/>
@@ -93,12 +93,10 @@ cd recurrly
 
 ## Installation
 
-Before you begin developing your app, it's essential to set up Expo and initialize your project.
-
-- Start by creating a folder for your application. Then, open your terminal and navigate to that folder. To create an Expo app, you can use:
+## Install dependencies:
 
 ```bash
-npx create-expo-app@latest
+npm install
 ```
 
 By default, you get a TypeScript Expo app with Expo Router configured.
@@ -114,7 +112,6 @@ And pick whichever template fits your workflow.
 Since this repository is already created, install dependencies and start the development server:
 
 ```bash
-npm install
 npx expo start
 ```
 
@@ -150,12 +147,12 @@ POSTHOG_PROJECT_TOKEN=
 POSTHOG_HOST=https://us.i.posthog.com
 ```
 
-Replace the placeholder values with your real credentials. You can get these by signing up at: [**Expo**](https://expo.dev/accounts/shyam.mern), [**PostHog**](https://shyam.mern/nativesub-posthog) .
+Replace the placeholder values with your real credentials. You can get these by signing up at: [**Clerk**](https://clerk.com), [**PostHog**](https://posthog.com/).
 
 **Running the Project**
 
 ```bash
-npm run dev
+npx expo start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
