@@ -14,7 +14,7 @@
   <h3 align="center">Recurrly | Subscription Management | React Native App</h3>
 
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/watch?v=XUkNR-JfHwo" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
+     Track every subscription. Build it from scratch, step by step.
     </div>
 </div>
 
@@ -34,7 +34,7 @@ Recurrly is a full-stack subscription management application designed to help us
 ### Frontend & Mobile
 
 - **[React Native](https://reactnative.dev/)** is a powerful framework for building native mobile applications using React. It allows for a single codebase to run on both iOS and Android while maintaining the performance and feel of a truly native app.
-- **[Expo](https://jsm.dev/nativesub-expo)** is the official framework recommended by the React Native team. It provides a robust set of tools and services—like file-based routing and EAS (Expo Application Services)—that streamline the development, building, and submission process.
+- **[Expo](https://expo.dev/)** is the official framework recommended by the React Native team. It provides a robust set of tools and services—like file-based routing and EAS (Expo Application Services)—that streamline the development, building, and submission process.
 - **[TypeScript](https://www.typescriptlang.org/)** is a strongly typed programming language that builds on JavaScript. It provides static typing to catch errors early during development, improving code maintainability across the entire full-stack codebase.
 - **[NativeWind](https://www.nativewind.dev/)** allows you to style your React Native applications using **Tailwind CSS**. It brings the efficiency of utility-first CSS to mobile, enabling rapid UI development with a consistent design system.
 
