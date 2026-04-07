@@ -253,12 +253,12 @@ const SignUp = () => {
                   <TextInput
                     className={`auth-input ${passwordTouched && !passwordValid && "auth-input-error"}`}
                     value={password}
-                    placeholder="Create a strong password"
+                    placeholder="Enter your password"
                     placeholderTextColor="rgba(0, 0, 0, 0.4)"
                     secureTextEntry
                     onChangeText={setPassword}
                     onBlur={() => setPasswordTouched(true)}
-                    autoComplete="password-new"
+                    autoComplete="current-password"
                   />
                   {passwordTouched && !passwordValid && (
                     <Text className="auth-error">

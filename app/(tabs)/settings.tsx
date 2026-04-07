@@ -30,6 +30,12 @@ const Settings = () => {
     "User";
   const email = user?.emailAddresses[0]?.emailAddress;
 
+  const accountId = user?.id
+    ? user?.id.length > 20
+      ? `${user?.id.substring(0, 20)}...`
+      : user?.id
+    : "N/A";
+
   return (
     <SafeAreaView className="flex-1 bg-background p-5">
       <Text className="text-3xl font-sans-bold text-primary mb-6">
@@ -71,7 +77,7 @@ const Settings = () => {
               numberOfLines={1}
               ellipsizeMode="tail"
             >
-              {user?.id?.substring(0, 20)}...
+              {accountId}
             </Text>
           </View>
           <View className="flex-row justify-between items-center py-2">

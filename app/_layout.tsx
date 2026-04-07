@@ -46,7 +46,7 @@ function RootLayoutContent() {
     }
   }, [pathname, params]);
 
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     "sans-regular": require("../assets/fonts/PlusJakartaSans-Regular.ttf"),
     "sans-bold": require("../assets/fonts/PlusJakartaSans-Bold.ttf"),
     "sans-medium": require("../assets/fonts/PlusJakartaSans-Medium.ttf"),
@@ -56,14 +56,16 @@ function RootLayoutContent() {
   });
 
   useEffect(() => {
-    // Hide splash only when both fonts and auth are loaded
-    if (fontsLoaded && authLoaded) {
+    if ((fontsLoaded || fontError) && authLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [fontsLoaded, authLoaded]);
+  }, [fontsLoaded, fontError, authLoaded]);
 
-  // Don't render app until both are ready
-  if (!fontsLoaded || !authLoaded) return null;
+  if ((!fontsLoaded && !fontError) || !authLoaded) return null;
+
+  if (fontError) {
+    throw fontError;
+  }
 
   return <Stack screenOptions={{ headerShown: false }} />;
 }
