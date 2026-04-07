@@ -5,9 +5,9 @@ import { Image, Text, View } from "react-native";
 const UpcomingSubscriptionCard = ({
   name,
   price,
-  daysLeft,
   icon,
   currency,
+  daysLeft,
 }: UpcomingSubscription) => {
   return (
     <View className="upcoming-card">

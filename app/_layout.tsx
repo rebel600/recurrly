@@ -8,7 +8,7 @@ import {
   useGlobalSearchParams,
   usePathname,
 } from "expo-router";
-import { PostHog } from "posthog-react-native";
+import { PostHog, PostHogProvider } from "posthog-react-native";
 import { useEffect, useRef } from "react";
 
 SplashScreen.preventAutoHideAsync();
@@ -77,17 +77,17 @@ function RootLayoutContent() {
 
 export default function RootLayout() {
   return (
-    // <PostHogProvider
-    //   client={posthog}
-    //   autocapture={{
-    //     captureScreens: false,
-    //     captureTouches: true,
-    //     propsToCapture: ['testID'],
-    //   }}
-    // >
-    // </PostHogProvider>
-    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-      <RootLayoutContent />
-    </ClerkProvider>
+    <PostHogProvider
+      client={posthog}
+      autocapture={{
+        captureScreens: false,
+        captureTouches: true,
+        propsToCapture: ["testID"],
+      }}
+    >
+      <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
+        <RootLayoutContent />
+      </ClerkProvider>
+    </PostHogProvider>
   );
 }

@@ -231,9 +231,9 @@ const SingIn = () => {
                   <Text className="auth-link">Create Account</Text>
                 </Pressable>
               </Link>
-              <Link href="/" asChild>
+              <Link href="/onboarding" asChild>
                 <Pressable>
-                  <Text className="/">Dashboard</Text>
+                  <Text className="font-sans-semibold">Onboarding</Text>
                 </Pressable>
               </Link>
             </View>
