@@ -8,9 +8,14 @@ import {
   useGlobalSearchParams,
   usePathname,
 } from "expo-router";
+import { PostHog } from "posthog-react-native";
 import { useEffect, useRef } from "react";
 
 SplashScreen.preventAutoHideAsync();
+
+const posthog = new PostHog(process.env.EXPO_PUBLIC_POSTHOG_KEY!, {
+  host: process.env.EXPO_PUBLIC_POSTHOG_HOST,
+});
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 
