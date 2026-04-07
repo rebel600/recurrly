@@ -1,19 +1,12 @@
-import Constants from "expo-constants";
 import PostHog from "posthog-react-native";
 
-const rawApiKey = Constants.expoConfig?.extra?.posthogProjectToken as
-  | string
-  | undefined;
-const rawHost = Constants.expoConfig?.extra?.posthogHost as string | undefined;
+const rawApiKey = process.env.EXPO_PUBLIC_POSTHOG_KEY;
+const rawHost = process.env.EXPO_PUBLIC_POSTHOG_HOST;
 
 // Trim and normalize API key and host
 const apiKey = rawApiKey?.trim();
 const host = rawHost?.trim();
-const isPostHogConfigured =
-  (!!apiKey &&
-    apiKey !== "" &&
-    apiKey !== process.env.EXPO_PUBLIC_POSTHOG_KEY) ||
-  "posthog_api_key";
+const isPostHogConfigured = !!apiKey && apiKey !== "";
 
 if (!isPostHogConfigured) {
   console.warn(
