@@ -1,6 +1,7 @@
 import { useSignIn } from "@clerk/expo";
 import { Href, Link, useRouter } from "expo-router";
 import { styled } from "nativewind";
+import { usePostHog } from "posthog-react-native";
 import React, { useState } from "react";
 import {
   KeyboardAvoidingView,
@@ -17,6 +18,7 @@ const SafeAreaView = styled(RNSafeAreaView);
 const SingIn = () => {
   const { signIn, errors, fetchStatus } = useSignIn();
   const router = useRouter();
+  const posthog = usePostHog();
 
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
@@ -44,9 +46,9 @@ const SingIn = () => {
 
     if (error) {
       console.error(JSON.stringify(error, null, 2));
-      // posthog.capture("user_sign_in_failed", {
-      //   error_message: error.message,
-      // });
+      posthog.capture("user_sign_in_failed", {
+        error_message: error.message,
+      });
       return;
     }
 
@@ -107,11 +109,11 @@ const SingIn = () => {
           }
 
           // Track successful sign-in after verification
-          // posthog.identify(emailAddress, {
-          //   $set: { email: emailAddress },
-          //   $set_once: { first_sign_in_date: new Date().toISOString() },
-          // });
-          // posthog.capture("user_signed_in", { email: emailAddress });
+          posthog.identify(emailAddress, {
+            $set: { email: emailAddress },
+            $set_once: { first_sign_in_date: new Date().toISOString() },
+          });
+          posthog.capture("user_signed_in", { email: emailAddress });
 
           const url = decorateUrl("/(tabs)");
           if (url.startsWith("http")) {

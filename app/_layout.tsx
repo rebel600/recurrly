@@ -43,10 +43,10 @@ function RootLayoutContent() {
         {} as Record<string, string | string[]>,
       );
 
-      // posthog.screen(pathname, {
-      //   previous_screen: previousPathname.current ?? null,
-      //   ...sanitizedParams,
-      // });
+      posthog.screen(pathname, {
+        previous_screen: previousPathname.current ?? null,
+        ...sanitizedParams,
+      });
       previousPathname.current = pathname;
     }
   }, [pathname, params]);
